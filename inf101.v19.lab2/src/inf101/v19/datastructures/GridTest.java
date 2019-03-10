@@ -16,6 +16,13 @@ public class GridTest {
 		IGrid grid = new MyGrid(11, 17, CellState.DEAD);
 		
 		// TODO: sjekk at bredde og høyde faktisk er 11 og 17
+		if (( grid.getWidth() > 11) || (grid.getWidth() < 11)) {
+			fail("WIDTH: Should throw exception");
+		}
+		
+		if ( grid.getHeight() != 17) {
+			fail("HEIGHT: Should throw exception");
+		}
 	}
 	/**
 	 * Tests that trying to access outside of the dimensions of the grid throws
